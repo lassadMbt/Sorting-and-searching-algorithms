@@ -1,0 +1,18 @@
+ALGORITHM sort
+VAR
+    i, j, key : INTEGER;
+
+BEGIN
+    //array sorting
+    FOR i FROM 1 TO arr.length-1 DO
+        key := arr[i]; // pick the current elemenrt to insert into the sorted sequence
+        j := i-1; // initilize a varriable to compare with elemments in the sorted sequence
+        WHILE (j >= 0 AND arr[j] > key) DO
+            arr[j+1] := arr[j]; // Move elements greater than key one position ahead
+            j := j-1
+
+        
+        arr[j+1] := key; // Place key at after the element just smaller than it
+        END_WHILE 
+    END_FOR
+END
